@@ -42,6 +42,7 @@ export default defineComponent({
     gestureHandling: String as PropType<'cooperative' | 'greedy' | 'none' | 'auto'>,
     heading: Number,
     keyboardShortcuts: { type: Boolean, default: undefined },
+    libraries: Array as PropType<('drawing' | 'geometry' | 'localContext' | 'places' | 'visualization')[]>,
     mapTypeControl: { type: Boolean, default: undefined },
     mapTypeControlOptions: Object as PropType<IMapTypeControlOptions>,
     mapTypeId: {
@@ -159,7 +160,7 @@ export default defineComponent({
       const loader = new Loader({
         apiKey: props.apiKey,
         version: 'weekly',
-        libraries: ['places'],
+        libraries: props.libraries || ['places'],
         language: props.language,
         region: props.region,
       });

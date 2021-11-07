@@ -1,6 +1,6 @@
 {
-  "name": "vue3-google-map",
-  "version": "0.6.0",
+  "name": "@cooper667/vue3-google-map",
+  "version": "0.6.1",
   "license": "MIT",
   "repository": {
     "type": "git",
